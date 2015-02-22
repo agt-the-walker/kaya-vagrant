@@ -1,13 +1,14 @@
 # Purpose
 
 This small project shows how to run unit tests on
-[Kaya](http://www.paolocapriotti.com/kaya/) without running into dependency
-hell on your local host.
+[Kaya](http://www.paolocapriotti.com/kaya/) then run the application itself
+without running into dependency hell on your local host.
 
 # Requirements
 
 * [Git](http://git-scm.com/)
 * [Vagrant](https://www.vagrantup.com/)
+* [X Server](http://www.freedesktop.org/wiki/Software/Xserver/) (optional)
 
 # Walkthrough
 
@@ -172,5 +173,10 @@ to have fixed the three errors above. Let's merge the relevant commit into v0.4:
     Loaded suite /usr/lib/ruby/vendor_ruby/rake/rake_test_loader
     [...]
     265 tests, 1687 assertions, 0 failures, 0 errors
+
+If the local host is running an X server, you can now run the application with:
+
+    $ ./run.sh  # the warning below is harmless
+    QGtkStyle was unable to detect the current GTK+ theme.
 
 That's all folks!

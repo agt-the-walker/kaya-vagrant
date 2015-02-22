@@ -9,4 +9,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision 'shell', path: 'setup.sh'
 
   config.vm.synced_folder '..', '/mnt/git'
+
+  config.ssh.forward_x11 = true
 end
